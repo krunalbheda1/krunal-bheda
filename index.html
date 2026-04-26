@@ -152,6 +152,23 @@ footer{
   text-align:center;font-size:12px;color:#9ca3af;
 }
 
+
+/* ── HERO LAYOUT WITH PHOTO ── */
+.hero-inner{display:flex;align-items:center;justify-content:space-between;gap:2.5rem;flex-wrap:wrap}
+.hero-text{flex:1;min-width:260px}
+.hero-photo-wrap{flex-shrink:0}
+.hero-photo{
+  width:220px;height:220px;border-radius:50%;
+  object-fit:cover;object-position:top center;
+  border:4px solid #fff;
+  box-shadow:0 0 0 3px #1A56DB, 0 8px 32px rgba(26,86,219,0.15);
+  display:block;
+}
+@media(max-width:540px){
+  .hero-inner{flex-direction:column-reverse;align-items:flex-start;gap:1.25rem}
+  .hero-photo{width:120px;height:120px}
+}
+
 /* ── RESPONSIVE ── */
 @media(max-width:540px){
   .stats{grid-template-columns:repeat(2,1fr)}
@@ -174,6 +191,8 @@ footer{
 
   <!-- HERO -->
   <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
     <div class="hero-badge"><span class="dot"></span> Open to opportunities</div>
     <div class="hero-mono">Backend Developer · Python · AWS</div>
     <h1>Krunal<br><em>Bheda</em></h1>
@@ -183,14 +202,19 @@ footer{
       with proven impact on latency, reliability, and cloud-native architecture.
     </p>
     <div class="hero-links">
-      <a class="btn btn-primary" href="mailto:kru.bheda20@gmail.com">Get in touch</a>
+      <a class="btn btn-ghost" href="mailto:kru.bheda20@gmail.com">kru.bheda20@gmail.com</a>
       <a class="btn btn-linkedin" href="https://www.linkedin.com/in/krunal-bheda" target="_blank" rel="noopener">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         LinkedIn
       </a>
-      <!-- <a class="btn btn-outline" href="tel:+916354295546">+91 63542 95546</a> -->
+      <a class="btn btn-ghost" href="tel:+916354295546">+91 63542 95546</a>
       <span class="btn btn-ghost">📍 Surat, Gujarat, India</span>
     </div>
+      </div><!-- end hero-text -->
+      <div class="hero-photo-wrap">
+        <img class="hero-photo" src="krunal.png" alt="Krunal Bheda" />
+      </div>
+    </div><!-- end hero-inner -->
   </div>
 
   <!-- STATS -->
@@ -343,7 +367,7 @@ footer{
     <div class="list-item"><span class="list-icon">🎓</span><div><strong>B.Sc. Information Technology</strong> &nbsp;—&nbsp; VNSGU &nbsp;·&nbsp; 2018–2021</div></div>
   </div>
 
-  <!-- CONTACT -->
+  <!-- CONTACT
   <div class="section">
     <div class="section-title">Contact</div>
     <div class="contact-grid">
@@ -351,7 +375,7 @@ footer{
       <a class="contact-chip" href="tel:+916354295546" style="text-decoration:none;color:inherit">📞 +91 63542 95546</a>
       <span class="contact-chip">📍 Surat, Gujarat, India</span>
     </div>
-  </div>
+  </div> -->
 
   <footer>
     Krunal Bheda &nbsp;·&nbsp; Backend Developer &nbsp;·&nbsp; Python &amp; AWS
